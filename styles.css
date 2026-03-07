@@ -209,50 +209,123 @@ ul {
     background-color: var(--text-primary);
 }
 
-/* Hero Section */
+/* Hero Section — Three.js Infinite Runner */
 .hero {
     position: relative;
-    padding-top: 100px;
-    justify-content: center;
-    text-align: center;
+    padding: 0;
+    min-height: 100vh;
+    display: block;
     overflow: hidden;
+    background: #050510;
 }
 
-.hero-content {
-    max-width: 800px;
-    z-index: 2;
-    padding: 0 20px;
+#threejs-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    z-index: 1;
 }
 
+/* Runner HUD — overlaid above the canvas */
+.runner-hud {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none; /* pass clicks to canvas by default */
+}
+
+.runner-hud a,
+.runner-hud button {
+    pointer-events: all; /* re-enable for interactive elements */
+}
+
+.hud-top {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.hud-top .name {
+    font-size: 3.8rem;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.6), 0 0 60px rgba(0, 212, 255, 0.3);
+}
+
+.hud-top .title {
+    font-size: 1.7rem;
+    color: var(--text-secondary);
+    text-shadow: 0 0 15px rgba(160, 32, 240, 0.5);
+}
+
+.hud-bottom {
+    padding-bottom: 32px;
+    text-align: center;
+    transition: opacity 0.8s ease;
+}
+
+.scroll-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.9rem;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    padding: 10px 22px;
+    border-radius: 30px;
+    letter-spacing: 0.5px;
+}
+
+.scroll-hint i {
+    color: var(--accent-color);
+}
+
+.bounce-hint {
+    animation: bounce-y 1.6s infinite ease-in-out;
+}
+
+@keyframes bounce-y {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(5px); }
+}
+
+
+/* Shared Typography & Component Styles */
 .greeting {
     color: var(--accent-color);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+    margin-bottom: 8px;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    text-shadow: 0 0 10px var(--accent-color);
 }
 
 .name {
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 20px;
-    background: linear-gradient(90deg, var(--text-primary), var(--accent-color));
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, #ffffff, var(--accent-color));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: var(--text-secondary);
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .cursor {
     color: var(--accent-color);
     animation: blink 1s infinite;
+    -webkit-text-fill-color: var(--accent-color);
 }
 
 @keyframes blink {
@@ -260,37 +333,31 @@ ul {
     50% { opacity: 0; }
 }
 
-.summary {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-}
-
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .btn {
-    padding: 12px 28px;
+    padding: 12px 26px;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     cursor: pointer;
     transition: var(--transition);
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    text-decoration: none;
 }
 
 .primary-btn {
     background-color: var(--accent-color);
     color: #fff;
     border: 2px solid var(--accent-color);
-    box-shadow: 0 4px 15px var(--accent-glow);
+    box-shadow: 0 4px 18px var(--accent-glow);
 }
 
 .primary-btn:hover {
@@ -299,9 +366,10 @@ ul {
 }
 
 .secondary-btn {
-    background-color: transparent;
+    background-color: rgba(255,255,255,0.05);
     color: var(--text-primary);
-    border: 2px solid var(--border-color);
+    border: 2px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(6px);
 }
 
 .secondary-btn:hover {
@@ -316,82 +384,15 @@ ul {
 }
 
 .social-links-hero a {
-    color: var(--text-secondary);
-    font-size: 1.5rem;
+    color: rgba(255,255,255,0.5);
+    font-size: 1.4rem;
     transition: var(--transition);
 }
 
 .social-links-hero a:hover {
     color: var(--accent-color);
     transform: translateY(-3px);
-}
-
-/* Hero Shapes (Background Animation) */
-.hero-shapes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
-    pointer-events: none;
-}
-
-.shape {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
-    animation: float 10s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.shape-1 {
-    width: 400px;
-    height: 400px;
-    background: var(--accent-color);
-    top: -100px;
-    right: -100px;
-}
-
-.shape-2 {
-    width: 300px;
-    height: 300px;
-    background: #a371f7;
-    bottom: -50px;
-    left: -100px;
-    animation-delay: -5s;
-}
-
-.shape-3 {
-    width: 200px;
-    height: 200px;
-    background: #2ea043;
-    top: 40%;
-    left: 40%;
-    animation-duration: 15s;
-}
-
-@keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(30px, 50px) scale(1.1); }
-}
-
-.scroll-down {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--text-secondary);
-    font-size: 1.5rem;
-    animation: bounce 2s infinite;
-    z-index: 2;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
-    40% { transform: translateY(-15px) translateX(-50%); }
-    60% { transform: translateY(-7px) translateX(-50%); }
+    text-shadow: 0 0 10px var(--accent-color);
 }
 
 /* About Section */
@@ -773,13 +774,13 @@ footer p {
     .timeline-item { padding-left: 40px; }
 }
 
-/* tsParticles Background Container */
-#tsparticles {
+/* tsParticles / Three.js Background Container */
+#threejs-canvas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    pointer-events: none; /* Let clicks pass through to underneath elements */
+    pointer-events: none;
 }
