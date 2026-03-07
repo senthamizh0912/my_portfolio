@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senthamizharan Velmurugan - Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience & Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="hero-content">
+            <p class="greeting">Hello, I'm</p>
+            <h1 class="name">Senthamizharan Velmurugan</h1>
+            <h2 class="title">I'm a <span id="typewriter"></span><span class="cursor">|</span></h2>
+            <p class="summary">Enthusiastic Computer Science Engineering student with a solid foundation in Java, MySQL,
+                and AWS Cloud. Eager to build real-world applications.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn primary-btn">Contact Me</a>
+                <a href="Senthamizharan_Resume(2).pdf" target="_blank" class="btn secondary-btn">View Resume <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="social-links-hero">
+                <a href="https://linkedin.com/in/senthamizharan-velmurugan" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/senthamizh0912" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="mailto:senthamizhvel2005@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section reveal">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am an enthusiastic and fast-learning Computer Science Engineering student at Manakula Vinayagar
+                        Institute of Technology, Puducherry.</p>
+                    <p>I possess a solid foundation in <strong>Java</strong>, <strong>MySQL</strong>, and <strong>AWS
+                            Cloud</strong>. I am eager to apply my strong problem-solving skills and logical reasoning
+                        in a challenging internship or entry-level role.</p>
+                    <p>My keen interest lies in backend development and building scalable, real-world applications that
+                        solve actual problems.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3 class="stat-number">8.3</h3>
+                            <p class="stat-label">CGPA</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="stat-number">2+</h3>
+                            <p class="stat-label">Projects</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="stat-number">5+</h3>
+                            <p class="stat-label">Certifications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section reveal">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <!-- Programming -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Java</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Python</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-desktop"></i> Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>HTML</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>CSS</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>JavaScript (Basics)</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend & DB -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-database"></i> Backend & Database</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>MySQL</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud -->
+                <div class="skill-category card">
+                    <h3><i class="fas fa-cloud"></i> Cloud Technologies</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>AWS (S3, EC2, VPC)</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Projects Section -->
+    <section id="experience" class="experience section reveal">
+        <div class="container">
+            <h2 class="section-title">Experience & Projects</h2>
+            <div class="timeline">
+
+                <!-- Internship -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card hover-effect">
+                        <span class="date">Aug 2025</span>
+                        <h3 class="title">Artificial Intelligence & Generative AI Intern</h3>
+                        <p class="subtitle">YBI Foundation | Remote</p>
+                        <ul class="details-list">
+                            <li>Gained hands-on exposure to AI concepts and Generative AI tools through guided remote
+                                training modules.</li>
+                            <li>Applied learning to practical exercises involving AI model exploration and prompt
+                                engineering basics.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card hover-effect">
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">JavaFX</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">JSON</span>
+                        </div>
+                        <h3 class="title">JavaFX News Fetcher Application</h3>
+                        <p class="subtitle">Personal Project</p>
+                        <ul class="details-list">
+                            <li>Built a JavaFX desktop application to fetch and display real-time news using REST APIs
+                                and JSON parsing.</li>
+                            <li>Demonstrated ability to integrate third-party APIs and handle asynchronous data in a
+                                GUI-based application.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section reveal">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+
+            <div class="edu-grid">
+                <div class="edu-column">
+                    <h3 class="column-title"><i class="fas fa-graduation-cap"></i> Academic Journey</h3>
+
+                    <div class="edu-card card hover-effect">
+                        <span class="date">2023 – 2027</span>
+                        <h4 class="degree">B.Tech in Computer Science Engineering</h4>
+                        <p class="institution">Manakula Vinayagar Institute of Technology, Puducherry</p>
+                        <p class="score">CGPA: 8.3/10</p>
+                    </div>
+
+                    <div class="edu-card card hover-effect">
+                        <span class="date">2022 – 2023</span>
+                        <h4 class="degree">12th Grade – State Board</h4>
+                        <p class="institution">Amalorpavam Higher Secondary School, Puducherry</p>
+                        <p class="score">Score: 83.5%</p>
+                    </div>
+
+                    <div class="edu-card card hover-effect">
+                        <span class="date">2020 – 2021</span>
+                        <h4 class="degree">10th Grade – State Board</h4>
+                        <p class="institution">Amalorpavam Higher Secondary School, Puducherry</p>
+                        <p class="score">Result: All Pass</p>
+                    </div>
+                </div>
+
+                <div class="edu-column">
+                    <h3 class="column-title"><i class="fas fa-certificate"></i> Certifications & Workshops</h3>
+                    <ul class="cert-list">
+                        <li class="cert-item card">
+                            <span class="cert-date">Jan 2026</span>
+                            <div class="cert-details">
+                                <h4>Getting Started with AI</h4>
+                                <p>IBM SkillsBuild</p>
+                            </div>
+                        </li>
+                        <li class="cert-item card">
+                            <span class="cert-date">Jan 2026</span>
+                            <div class="cert-details">
+                                <h4>AWS Academy Cloud Foundations</h4>
+                                <p>AWS</p>
+                            </div>
+                        </li>
+                        <li class="cert-item card">
+                            <span class="cert-date">Oct 2025</span>
+                            <div class="cert-details">
+                                <h4>Learning Full Stack Development</h4>
+                                <p>Infosys Springboard</p>
+                            </div>
+                        </li>
+                        <li class="cert-item card">
+                            <span class="cert-date">Jul 2025</span>
+                            <div class="cert-details">
+                                <h4>Python (Basic) Certification</h4>
+                                <p>HackerRank</p>
+                            </div>
+                        </li>
+                        <li class="cert-item card">
+                            <span class="cert-date">Oct 2024</span>
+                            <div class="cert-details">
+                                <h4>Java Programming with ChatGPT: Learn using GenAI</h4>
+                                <p>GrowFast</p>
+                            </div>
+                        </li>
+                        <li class="cert-item card">
+                            <span class="cert-date">Workshop</span>
+                            <div class="cert-details">
+                                <h4>GenAI – Gyanith 2025</h4>
+                                <p>NIT Puducherry</p>
+                            </div>
+                        </li>
+                        <li class="cert-item card">
+                            <span class="cert-date">Hackathon</span>
+                            <div class="cert-details">
+                                <h4>Train-IT Hackathon</h4>
+                                <p>Participation (Apr 2025)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section reveal">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-text">I'm currently looking for new opportunities. Whether you have a question or just
+                want to say hi, I'll try my best to get back to you!</p>
+
+            <div class="contact-cards">
+                <a href="mailto:senthamizhvel2005@gmail.com" class="contact-card card hover-effect">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>senthamizhvel2005@gmail.com</p>
+                </a>
+
+                <a href="https://linkedin.com/in/senthamizharan-velmurugan" target="_blank"
+                    class="contact-card card hover-effect">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me</p>
+                </a>
+
+                <a href="https://github.com/senthamizh0912" target="_blank" class="contact-card card hover-effect">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>View my repositories</p>
+                </a>
+
+                <div class="contact-card card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone</h3>
+                    <p>+91 98941 21568</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Senthamizharan Velmurugan. Built with HTML, CSS & JS.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
