@@ -148,4 +148,55 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Initialize tsParticles for heartbeat lighting background
+    if (typeof tsParticles !== 'undefined') {
+        tsParticles.load("tsparticles", {
+            fullScreen: { enable: false },
+            particles: {
+                number: { value: 50, density: { enable: true, area: 800 } },
+                color: { value: ["#ff2a2a", "#ff4d4d", "#ff1a1a"] },
+                shape: { type: "circle" },
+                opacity: {
+                    value: { min: 0.2, max: 0.9 },
+                    animation: { enable: true, speed: 3, minimumValue: 0.2, sync: false }
+                },
+                size: {
+                    value: { min: 2, max: 6 },
+                    animation: { enable: true, speed: 15, minimumValue: 2, sync: false } /* Fast pulse like a beat */
+                },
+                links: {
+                    enable: true,
+                    distance: 120,
+                    color: "#ff2a2a",
+                    opacity: 0.5,
+                    width: 1.5,
+                    triangles: {
+                        enable: true,
+                        color: "#ff2a2a",
+                        opacity: 0.05
+                    }
+                },
+                move: {
+                    enable: true,
+                    speed: 1.2,
+                    direction: "none",
+                    outModes: "out"
+                }
+            },
+            interactivity: {
+                detectsOn: "window",
+                events: {
+                    onHover: { enable: true, mode: "grab" },
+                    onClick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 200, links: { opacity: 0.8 } },
+                    push: { quantity: 5 }
+                }
+            },
+            detectRetina: true
+        });
+    }
 });
