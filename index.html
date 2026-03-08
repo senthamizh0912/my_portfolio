@@ -21,7 +21,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">SV.</a>
+            <a href="#home" class="logo">Portfolio</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -40,35 +40,35 @@
         </div>
     </nav>
 
-    <!-- HERO: Three.js Infinite Runner -->
+    <!-- Hero Section -->
     <section id="home" class="hero section">
-        <!-- Three.js canvas fills the whole hero -->
-        <canvas id="threejs-canvas"></canvas>
-
-        <!-- HUD overlay: name + scroll hint -->
-        <div class="runner-hud">
-            <div class="hud-top">
-                <p class="greeting">Hello, I'm</p>
-                <h1 class="name">Senthamizharan Velmurugan</h1>
-                <h2 class="title">I'm a <span id="typewriter"></span><span class="cursor">|</span></h2>
-                <div class="hero-buttons">
-                    <a href="#about" class="btn primary-btn">Explore Portfolio</a>
-                    <a href="Senthamizharan_Resume(2).pdf" target="_blank" class="btn secondary-btn">View Resume <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="social-links-hero">
-                    <a href="https://linkedin.com/in/senthamizharan-velmurugan" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/senthamizh0912" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:senthamizhvel2005@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
+        <div class="hero-content">
+            <p class="greeting">Hello, I'm</p>
+            <h1 class="name">Senthamizharan Velmurugan</h1>
+            <h2 class="title">I'm a <span id="typewriter"></span><span class="cursor">|</span></h2>
+            <p class="summary">Enthusiastic Computer Science Engineering student with a solid foundation in Java, MySQL,
+                and AWS Cloud. Eager to build real-world applications.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn primary-btn">Contact Me</a>
+                <a href="Senthamizharan_Resume(2).pdf" target="_blank" class="btn secondary-btn">View Resume <i
+                        class="fas fa-arrow-right"></i></a>
             </div>
-            <div id="runner-hud" class="hud-bottom">
-                <div class="scroll-hint">
-                    <i class="fas fa-mouse"></i>
-                    <span>Scroll to speed up the runner &amp; reveal achievements</span>
-                    <i class="fas fa-chevron-down bounce-hint"></i>
-                </div>
+            <div class="social-links-hero">
+                <a href="https://linkedin.com/in/senthamizharan-velmurugan" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/senthamizh0912" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="mailto:senthamizhvel2005@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </section>
 
     <!-- About Section -->
@@ -360,7 +360,6 @@
         </div>
     </footer>
 
-    <script type="module" src="three-scene.js"></script>
     <script src="script.js"></script>
 </body>
 
